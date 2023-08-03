@@ -25,6 +25,12 @@ class _SplashViewBodyState extends State<SplashViewBody>
     animationController.forward();
   }
 
+  @override
+  void dispose() {
+    super.dispose();
+    animationController.dispose();
+  }
+
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
