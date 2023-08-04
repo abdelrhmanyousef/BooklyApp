@@ -1,4 +1,4 @@
-import 'package:booklyapp/Feature/Home/Widget/Presention/Views/HomeView.dart';
+import 'package:booklyapp/Feature/Home/Data/Presention/Views/HomeView.dart';
 import 'package:booklyapp/constans.dart';
 import 'package:booklyapp/core/utiles/assets.dart';
 import 'package:flutter/material.dart';
@@ -51,8 +51,8 @@ class _SplashViewBodyState extends State<SplashViewBody>
   }
 
   void NavigatToHome() {
-    Future.delayed(Duration(seconds: 2), () {
-      Get.to(() => HomeView(),
+    Future.delayed(const Duration(seconds: 2), () {
+      Get.to(() => const HomeView(),
           transition: Transition.fade, duration: ktranstionDurtion);
     });
   }
