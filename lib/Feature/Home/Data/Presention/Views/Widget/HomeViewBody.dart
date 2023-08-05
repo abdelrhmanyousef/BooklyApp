@@ -1,9 +1,7 @@
 import 'package:booklyapp/Feature/Home/Data/Presention/Views/Widget/BookListView.dart';
 import 'package:booklyapp/core/utiles/Styless.dart';
-import 'package:booklyapp/core/utiles/assets.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../../constans.dart';
 import 'BestSellerListView.dart';
 import 'CustomAppBar.dart';
 

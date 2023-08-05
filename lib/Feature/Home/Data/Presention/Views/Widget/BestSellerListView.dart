@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../../../constans.dart';
 import '../../../../../../core/utiles/Styless.dart';
+import 'BookRate.dart';
 
 class BestSellerListViewItems extends StatelessWidget {
   const BestSellerListViewItems({super.key});
@@ -32,40 +33,44 @@ class BestSellerListViewItems extends StatelessWidget {
         const SizedBox(
           width: 30,
         ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(
-              width: MediaQuery.of(context).size.width * .4,
-              child: const Text(
-                "Harry Potter and the Goblet of Fire",
-                style: Styels.textStyel20,
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-              ),
-            ),
-            const SizedBox(
-              height: 3,
-            ),
-            Text(
-              "J.K. Rowling",
-              style: Styels.textStyel14.copyWith(
-                fontFamily: kGTSectraFine,
-              ),
-            ),
-            const SizedBox(
-              height: 3,
-            ),
-            Row(
-              children: [
-                Text(
-                  "19.99 €",
-                  style:
-                      Styels.textStyel20.copyWith(fontWeight: FontWeight.bold),
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                width: MediaQuery.of(context).size.width * .4,
+                child: const Text(
+                  "Harry Potter and the Goblet of Fire",
+                  style: Styels.textStyel20,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
                 ),
-              ],
-            ),
-          ],
+              ),
+              const SizedBox(
+                height: 3,
+              ),
+              Text(
+                "J.K. Rowling",
+                style: Styels.textStyel14.copyWith(
+                    fontFamily: kGTSectraFine,
+                    color: Color.fromARGB(179, 230, 225, 225)),
+              ),
+              const SizedBox(
+                height: 3,
+              ),
+              Row(
+                children: [
+                  Text(
+                    "19.99 €",
+                    style: Styels.textStyel20
+                        .copyWith(fontWeight: FontWeight.bold),
+                  ),
+                  const Spacer(),
+                  const BookRate(),
+                ],
+              ),
+            ],
+          ),
         ),
       ],
     );
