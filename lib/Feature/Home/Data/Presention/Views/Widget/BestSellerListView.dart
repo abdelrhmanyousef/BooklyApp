@@ -1,7 +1,6 @@
 import 'package:booklyapp/core/utiles/assets.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../../constans.dart';
 import '../../../../../../core/utiles/Styless.dart';
 import 'BookRate.dart';
 
@@ -38,10 +37,10 @@ class BestSellerListViewItems extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
-                width: MediaQuery.of(context).size.width * .4,
-                child: const Text(
+                width: MediaQuery.of(context).size.width * .49,
+                child: Text(
                   "Harry Potter and the Goblet of Fire",
-                  style: Styels.textStyel20,
+                  style: Styels.textStyel20.copyWith(),
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                 ),
@@ -52,8 +51,8 @@ class BestSellerListViewItems extends StatelessWidget {
               Text(
                 "J.K. Rowling",
                 style: Styels.textStyel14.copyWith(
-                    fontFamily: kGTSectraFine,
-                    color: Color.fromARGB(179, 230, 225, 225)),
+                  color: Color.fromARGB(179, 230, 225, 225),
+                ),
               ),
               const SizedBox(
                 height: 3,
