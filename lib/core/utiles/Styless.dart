@@ -10,7 +10,6 @@ abstract class Styels {
   static const textStyel20 = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.normal,
-    fontFamily: kGTSectraFine,
   );
   static const textStyel30 = TextStyle(
     fontSize: 30,
