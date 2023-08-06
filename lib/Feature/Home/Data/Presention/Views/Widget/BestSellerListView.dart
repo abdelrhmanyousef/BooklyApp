@@ -3,6 +3,7 @@ import 'package:booklyapp/core/utiles/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../../../../constans.dart';
 import '../../../../../../core/utiles/Styless.dart';
 import 'BookRate.dart';
 
@@ -46,7 +47,8 @@ class BestSellerListViewItems extends StatelessWidget {
                   width: MediaQuery.of(context).size.width * .5,
                   child: Text(
                     "Harry Potter and the Goblet of Fire",
-                    style: Styels.textStyel20.copyWith(),
+                    style: Styels.textStyel16
+                        .copyWith(fontFamily: CinzelDecorative),
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),
@@ -67,7 +69,7 @@ class BestSellerListViewItems extends StatelessWidget {
                   children: [
                     Text(
                       "19.99 €",
-                      style: Styels.textStyel20
+                      style: Styels.textStyel16
                           .copyWith(fontWeight: FontWeight.bold),
                     ),
                     const Spacer(),
