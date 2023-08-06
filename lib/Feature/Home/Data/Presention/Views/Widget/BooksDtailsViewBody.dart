@@ -3,10 +3,10 @@ import 'package:booklyapp/core/utiles/Styless.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../../constans.dart';
-import '../../../../../../core/utiles/Widget/CustomButton.dart';
 import 'BookRate.dart';
 import 'BoxAction.dart';
 import 'CustomAppBarBookDetailsView.dart';
+import 'SimilarBoxListView.dart';
 
 class BooksDetailsViewBody extends StatelessWidget {
   const BooksDetailsViewBody({super.key});
@@ -14,47 +14,69 @@ class BooksDetailsViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
-    return SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.only(left: 30, right: 30, top: 10),
-        child: Column(
-          children: [
-            CustomAppBarBookDetailsView(),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: width * .25),
-              child: ListViewItems(),
-            ),
-            const SizedBox(
-              height: 43,
-            ),
-            Text(
-              "The Jungle Book",
-              style: Styels.textStyel20.copyWith(
-                fontFamily: CinzelDecorative,
+    return CustomScrollView(
+      slivers: [
+        SliverFillRemaining(
+          child: SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.only(left: 30, right: 30, top: 10),
+              child: Column(
+                children: [
+                  CustomAppBarBookDetailsView(),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: width * .25),
+                    child: ListViewItems(),
+                  ),
+                  const SizedBox(
+                    height: 43,
+                  ),
+                  Text(
+                    "The Jungle Book",
+                    style: Styels.textStyel20.copyWith(
+                      fontFamily: CinzelDecorative,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 4,
+                  ),
+                  Text(
+                    "Rudyard Kipling",
+                    style: Styels.textStyel16.copyWith(
+                        color: const Color.fromARGB(179, 221, 216, 216),
+                        fontWeight: FontWeight.w600),
+                  ),
+                  const SizedBox(
+                    height: 18,
+                  ),
+                  const BookRate(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                  ),
+                  const SizedBox(
+                    height: 37,
+                  ),
+                  const BookAction(),
+                  const Expanded(
+                    child: SizedBox(
+                      height: 49,
+                    ),
+                  ),
+                  const Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      "You can also like",
+                      style: Styels.textStyel16,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  const SimilarBoxListView()
+                ],
               ),
             ),
-            const SizedBox(
-              height: 4,
-            ),
-            Text(
-              "Rudyard Kipling",
-              style: Styels.textStyel16.copyWith(
-                  color: const Color.fromARGB(179, 221, 216, 216),
-                  fontWeight: FontWeight.w600),
-            ),
-            const SizedBox(
-              height: 18,
-            ),
-            const BookRate(
-              mainAxisAlignment: MainAxisAlignment.center,
-            ),
-            const SizedBox(
-              height: 37,
-            ),
-            BookAction(),
-          ],
-        ),
-      ),
+          ),
+        )
+      ],
     );
   }
 }
