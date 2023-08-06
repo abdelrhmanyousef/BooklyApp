@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'Feature/Splash/Presention/Views/SplashView.dart';
 import 'constans.dart';
 import 'core/utiles/AppRouter.dart';
 
