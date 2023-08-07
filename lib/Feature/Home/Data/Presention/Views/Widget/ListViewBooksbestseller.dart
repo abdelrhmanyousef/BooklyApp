@@ -14,7 +14,7 @@ class ListViewBooksbestseller extends StatelessWidget {
           padding: EdgeInsets.symmetric(
             vertical: 10,
           ),
-          child: BestSellerListViewItems(),
+          child: BookListViewItem(),
         );
       },
     );
