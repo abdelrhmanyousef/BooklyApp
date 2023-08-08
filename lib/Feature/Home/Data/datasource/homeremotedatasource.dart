@@ -1,7 +1,10 @@
 import 'package:booklyapp/Feature/Home/d/Models/book_model/book_model.dart';
+import 'package:booklyapp/constans.dart';
 import 'package:booklyapp/core/utiles/Apiservice.dart';
+import 'package:hive/hive.dart';
 
-import '../../domain/entites/Homeentite.dart';
+import '../../../../core/utiles/Function/SaveBox.dart';
+import '../../domain/entites/Bookentite.dart';
 
 abstract class HomeRemoteDataSource {
   Future<List<BookEntites>> fetchFeatureBooks();
@@ -32,6 +35,7 @@ class HomeRemoteDataSourceImpl extends HomeRemoteDataSource {
     for (var bookMap in data['items']) {
       Books.add(BookModel.fromJson(bookMap));
     }
+    SaveDataBox(Books, KBox);
     return Books;
   }
 }
