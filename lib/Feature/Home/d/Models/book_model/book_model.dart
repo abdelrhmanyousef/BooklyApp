@@ -1,4 +1,4 @@
-import 'package:booklyapp/Feature/Home/domain/entites/Homeentite.dart';
+import 'package:booklyapp/Feature/Home/domain/entites/Bookentite.dart';
 
 import 'access_info.dart';
 import 'sale_info.dart';
