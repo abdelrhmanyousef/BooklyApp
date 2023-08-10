@@ -25,13 +25,22 @@ class HomeRepoImpe extends Homerepo {
       var books = await homeRemoteDataSource.fetchFeatureBooks();
       return right(books);
     } catch (e) {
-      return left(failure());
+      return left(Serverfailur(e.toString()));
     }
   }
 
   @override
-  Future<Either<failure, List<BookEntites>>> fetchNewistBook() {
-    // TODO: implement fetchNewistBook
-    throw UnimplementedError();
+  Future<Either<failure, List<BookEntites>>> fetchNewistBook() async {
+    List<BookEntites> books;
+    try {
+      var books = homeLocalDataSource.fetchNewistBook();
+      if (books.isNotEmpty) {
+        return right(books);
+      }
+      books = await homeRemoteDataSource.fetchNewistBook();
+      return right(books);
+    } catch (e) {
+      return left(Serverfailur(e.toString()));
+    }
   }
 }
