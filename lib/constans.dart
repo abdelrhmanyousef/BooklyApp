@@ -5,3 +5,4 @@ const ktranstionDurtion = Duration(milliseconds: 250);
 const kGTSectraFine = "Shadows Into Light";
 const CinzelDecorative = "Cinzel Decorative";
 const KBox = "BookBox";
+const KNewsedBox = "NewsedBook";
