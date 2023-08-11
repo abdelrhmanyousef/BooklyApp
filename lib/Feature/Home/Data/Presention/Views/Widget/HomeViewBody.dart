@@ -2,6 +2,7 @@ import 'package:booklyapp/Feature/Home/Data/Presention/Views/Widget/BookListView
 import 'package:booklyapp/core/utiles/Styless.dart';
 import 'package:flutter/material.dart';
 
+import 'BookListViewBlocBuilder.dart';
 import 'CustomAppBar.dart';
 import 'ListViewBooksbestseller.dart';
 
@@ -20,7 +21,7 @@ class HomeViewBody extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 30),
               child: CustomAppBar(),
             ),
-            BookListView(),
+            BookListViewBlocBuilder(),
             SizedBox(
               height: 45,
             ),

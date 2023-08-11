@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
+import 'package:flutter/material.dart';
 
 class MyBlocObserver extends BlocObserver {
   @override
@@ -15,11 +16,18 @@ class MyBlocObserver extends BlocObserver {
     super.onError(bloc, error, stackTrace);
   }
 
-  @override
   void onChange(BlocBase bloc, Change change) {
-    log(change.toString());
-    super.onChange(bloc, change);
-    // TODO: implement onChange
+    debugPrint("change=$change");
+  }
+
+  @override
+  void onClose(BlocBase bloc) {
+    debugPrint("close=$bloc");
+  }
+
+  @override
+  void onCreate(BlocBase bloc) {
+    debugPrint("create=$bloc");
   }
 
   @override

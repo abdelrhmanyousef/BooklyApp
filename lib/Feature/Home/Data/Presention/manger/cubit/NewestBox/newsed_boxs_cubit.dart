@@ -10,7 +10,7 @@ class NewsedBoxsCubit extends Cubit<NewsedBoxsState> {
   NewsedBoxsCubit(this.NewestBoxusecase) : super(NewsedBoxsInitial());
 
   final fetchNewistBookusecase NewestBoxusecase;
-  Future<void> FetchFeaturedBooks() async {
+  Future<void> fetchNewistBook() async {
     emit(NewsedBoxsLoading());
     var result = await NewestBoxusecase.call();
     result.fold((l) {
